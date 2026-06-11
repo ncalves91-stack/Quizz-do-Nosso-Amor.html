@@ -1,859 +1,406 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-53DHR8PB');</script>
-    <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      connect-src 'self' https://viacep.com.br https://script.google.com https://script.googleusercontent.com https://www.google-analytics.com https://stats.g.doubleclick.net https://clarity.ms https://www.google.com https://googleads.g.doubleclick.net https://ad.doubleclick.net https://www.googleadservices.com https://www.google.com.br https://static.hsappstatic.net https://js.hs-banner.com https://js.hs-analytics.net https://js.hscollectedforms.net https://js.hsadspixel.net https://forms.hsforms.com https://track.hubspot.com https://forms.hscollectedforms.net https://b.clarity.ms https://c.bing.com https://www.googletagmanager.com;
-      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://js.hs-scripts.com https://js.hscollectedforms.net https://js.hs-banner.com https://js.hsadspixel.net https://js.hs-analytics.net https://www.clarity.ms https://clarity.ms https://scripts.clarity.ms https://www.google.com.br https://googleads.g.doubleclick.net https://c.bing.com;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      font-src 'self' https://fonts.gstatic.com;
-      img-src 'self' data: https://clarity.ms https://c.clarity.ms https://c.bing.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.com.br https://forms.hsforms.com https://track.hubspot.com https://js.hs-banner.com;
-    ">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultoria em Energia Solar - SoLivia Engenharia</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        body { display: flex; flex-direction: column; min-height: 100vh; }
-        .footer { margin-top: auto; }
-        .header__nav a.active { color: var(--dourado) !important; font-weight: 700; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Quizz do Nosso Amor 💘</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .conteudo-principal { padding-top: 90px; }
-        @media (max-width: 768px) { .conteudo-principal { padding-top: 70px; } }
+    body {
+      background: linear-gradient(145deg, #6b2e5f 0%, #3a1c3a 100%);
+      font-family: 'Nunito Sans', 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
 
-        .hero-consultoria {
-            background: linear-gradient(135deg, var(--azul) 0%, var(--azul-medio) 100%);
-            text-align: center;
-            padding: 3rem 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .hero-consultoria h1 {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-        .hero-consultoria p {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.9);
-            max-width: 700px;
-            margin: 0 auto;
-        }
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(255, 248, 245, 0.98);
+      border-radius: 2.5rem;
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
 
-        .o-que-section {
-            background: white;
-            border-radius: 2rem;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 1200px;
-            border: 1px solid #e0edf2;
-        }
-        .o-que-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-        .o-que-card {
-            text-align: center;
-            padding: 1.2rem;
-            background: #f9fbfd;
-            border-radius: 1.2rem;
-        }
-        .o-que-card svg {
-            width: 40px;
-            height: 40px;
-            stroke: var(--azul);
-            stroke-width: 1.5;
-            margin-bottom: 0.8rem;
-        }
-        .o-que-card h3 {
-            font-size: 1.2rem;
-            color: var(--azul);
-            margin-bottom: 0.5rem;
-        }
-        .o-que-card p {
-            font-size: 0.9rem;
-            color: #5c7a6c;
-        }
+    header {
+      background: #9e3c6b;
+      padding: 1.8rem 2rem;
+      text-align: center;
+      border-bottom: 4px solid #ffbc6e;
+    }
 
-        .porque-section {
-            background: white;
-            border-radius: 2rem;
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 1200px;
-            border: 1px solid #e0edf2;
-        }
-        .porque-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-        .porque-card {
-            text-align: center;
-            padding: 1.5rem;
-            background: #fefefc;
-            border-radius: 1.5rem;
-        }
-        .porque-card svg {
-            width: 48px;
-            height: 48px;
-            stroke: var(--azul);
-            stroke-width: 1.5;
-            margin-bottom: 1rem;
-        }
-        .porque-card h3 {
-            color: var(--azul);
-            margin-bottom: 0.5rem;
-        }
-        .porque-card p {
-            color: #5c7a6c;
-        }
+    header h1 {
+      color: white;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-shadow: 2px 2px 0 #5a1e3e;
+    }
 
-        .quiz-section {
-            background: white;
-            border-radius: 2rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            padding: 2rem;
-            margin: 2rem auto;
-            max-width: 900px;
-            border: 1px solid #e0edf2;
-        }
-        .quiz-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .quiz-header h2 {
-            font-size: 1.8rem;
-            color: var(--azul);
-            margin-bottom: 0.5rem;
-        }
-        .quiz-step { display: none; }
-        .quiz-step.active { display: block; }
-        .quiz-question p {
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--azul);
-            font-size: 1.2rem;
-        }
-        .quiz-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        .quiz-option {
-            background: #f1f5f9;
-            border: 1px solid #dce3ea;
-            border-radius: 50px;
-            padding: 0.6rem 1.2rem;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .quiz-option.selected {
-            background: var(--dourado);
-            color: var(--azul);
-            border-color: var(--dourado);
-            font-weight: 600;
-        }
-        .quiz-navigation {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .quiz-nav-btn {
-            background: var(--azul);
-            color: white;
-            border: none;
-            padding: 0.6rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        .quiz-nav-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-        .quiz-result {
-            text-align: center;
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background: #fef9e6;
-            border-radius: 1.5rem;
-        }
-        .btn-assinar-quiz {
-            background: var(--dourado);
-            color: var(--azul);
-            border: none;
-            padding: 0.7rem 1.8rem;
-            border-radius: 50px;
-            font-weight: 700;
-            cursor: pointer;
-            margin-top: 0.5rem;
-        }
+    main {
+      padding: 2rem;
+    }
 
-        .planos-section {
-            display: none;
-            margin: 3rem auto;
-        }
-        .planos-section.visible {
-            display: block;
-        }
-        .planos-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-        }
-        .plano-card {
-            flex: 1;
-            min-width: 280px;
-            max-width: 350px;
-            background: white;
-            border-radius: 2rem;
-            overflow: hidden;
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        .plano-card.recomendado { border: 2px solid var(--dourado); }
-        .recomendado-tag {
-            background: var(--dourado);
-            color: var(--azul);
-            text-align: center;
-            font-weight: 800;
-            font-size: 0.75rem;
-            padding: 0.3rem;
-            text-transform: uppercase;
-        }
-        .plano-header {
-            padding: 1.5rem;
-            text-align: center;
-            border-bottom: 1px solid #eef2f0;
-        }
-        .plano-nome { font-size: 1.8rem; font-weight: 700; }
-        .plano-preco { font-size: 2.2rem; font-weight: 800; color: var(--azul); }
-        .plano-preco span { font-size: 1rem; font-weight: 500; color: #5c7a6c; }
-        .plano-descricao { font-size: 0.85rem; color: #5e7a6e; margin-top: 0.5rem; }
-        .plano-features { padding: 1.5rem; background: #fefefc; }
-        .plano-features ul { list-style: none; padding: 0; }
-        .plano-features li {
-            padding: 0.5rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-            font-size: 0.85rem;
-            border-bottom: 1px solid #f0f3f1;
-        }
-        .plano-footer { padding: 1.2rem 1.5rem 1.5rem; text-align: center; }
-        .btn-assinar-plano {
-            background: var(--azul);
-            color: white;
-            width: 100%;
-            padding: 0.8rem;
-            border-radius: 50px;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-        }
-        .btn-outline {
-            background: white;
-            color: var(--azul);
-            border: 1px solid var(--azul);
-        }
+    #question {
+      background: #fff0f0;
+      padding: 1.4rem 1.8rem;
+      border-radius: 2rem;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #4a1e3a;
+      margin-bottom: 2rem;
+      border-left: 8px solid #ffbc6e;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
 
-        .modal-hubspot { max-width: 600px; width: 95%; }
-        .modal-hubspot .modal-content { padding: 1.5rem; }
-        .hubspot-form-container { max-height: 70vh; overflow-y: auto; }
-    </style>
+    #question-number {
+      background: #ffbc6e;
+      display: inline-block;
+      width: 2.2rem;
+      height: 2.2rem;
+      text-align: center;
+      line-height: 2.2rem;
+      border-radius: 60px;
+      color: #4a1e3a;
+      font-weight: 800;
+      margin-right: 0.7rem;
+    }
+
+    #answers-box {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    button {
+      background: white;
+      border: 2px solid #f0cfcf;
+      border-radius: 100px;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    button:hover:not(:disabled) {
+      background: #fff0f5;
+      border-color: #ff9f6e;
+      transform: scale(1.01);
+    }
+
+    .btn-letter {
+      background: #9e3c6b;
+      color: white;
+      font-weight: 800;
+      font-size: 1.2rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 60px;
+    }
+
+    .question-answer {
+      flex: 1;
+      color: #2d1a2a;
+    }
+
+    #score-container {
+      text-align: center;
+      padding: 1.5rem;
+      background: #fff8f5;
+      border-radius: 2rem;
+      animation: fadeSlide 0.4s ease;
+    }
+
+    #score-container h2 {
+      font-size: 2.2rem;
+      color: #9e3c6b;
+      margin-bottom: 0.5rem;
+    }
+
+    #display-score {
+      background: #ffbc6e;
+      display: inline-block;
+      padding: 0.6rem 2rem;
+      border-radius: 100px;
+      margin: 1rem auto;
+      font-weight: 800;
+      font-size: 2rem;
+      color: #3a1c3a;
+    }
+
+    #display-score span {
+      font-size: 2.6rem;
+    }
+
+    #restart {
+      background: #9e3c6b;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.8rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 40px;
+      margin-top: 1.5rem;
+      display: inline-flex;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    #restart:hover {
+      background: #ffbc6e;
+      color: #4a1e3a;
+    }
+
+    .hide {
+      display: none !important;
+    }
+
+    footer {
+      background: #f7e6e6;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #6b4a5a;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 550px) {
+      main { padding: 1.2rem; }
+      #question { font-size: 1.2rem; }
+      .btn-letter { width: 2rem; height: 2rem; font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53DHR8PB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="header__container">
-            <a href="index.html" class="header__logo"><img src="assets/img/logo.png" alt="Logo"></a>
-            <nav class="header__nav">
-                <a href="instalacao.html">Instalação</a>
-                <a href="consultoria.html" class="active">Consultoria</a>
-                <a href="calculadora.html">Calculadora</a>
-                <a href="blog.html">Blog</a>
-                <a href="contato.html">Contato</a>
-            </nav>
-            <a href="#" class="header__cta" id="openModalBtn">Simule sua Economia</a>
-            <button class="header__hamburger" id="hamburger"><span></span><span></span><span></span></button>
-        </div>
-    </header>
-
-    <!-- Menu mobile -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-menu__close" id="mobileClose">✕</button>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="instalacao.html">Instalação</a>
-            <a href="consultoria.html">Consultoria</a>
-            <a href="calculadora.html">Calculadora</a>
-            <a href="blog.html">Blog</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-    </div>
-    <div class="mobile-overlay" id="mobileOverlay"></div>
-
-    <div class="conteudo-principal">
-        <!-- Hero -->
-        <div class="hero-consultoria">
-            <h1>Desempenho solar sob controle</h1>
-            <p>Monitore seu sistema, evite perdas e garanta o retorno do investimento.</p>
-        </div>
-
-        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
-            <!-- O que é o laudo -->
-            <div class="o-que-section">
-                <h2 style="text-align: center; color: var(--azul); margin-bottom: 1rem;">📋 O que é o laudo de monitoramento?</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">Um relatório técnico detalhado que mostra, mês a mês, a saúde do seu sistema solar, com análises claras para você tomar decisões.</p>
-                <div class="o-que-grid">
-                    <div class="o-que-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                        <h3>Relatório mensal</h3>
-                        <p>Gráficos e indicadores que mostram a evolução da geração.</p>
-                    </div>
-                    <div class="o-que-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 12V8H4v4M12 4v4M4 12h16v8H4z"/><path d="M8 20v-4h8v4"/></svg>
-                        <h3>Geração real vs esperada</h3>
-                        <p>Compare o que seu sistema produziu com o potencial da sua região.</p>
-                    </div>
-                    <div class="o-que-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                        <h3>Indicador de saúde (semáforo)</h3>
-                        <p>Saiba de imediato se o desempenho está bom, regular ou crítico.</p>
-                    </div>
-                    <div class="o-que-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                        <h3>Perda financeira acumulada</h3>
-                        <p>Calculamos o impacto financeiro da geração abaixo do esperado.</p>
-                    </div>
-                    <div class="o-que-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                        <h3>Alertas proativos</h3>
-                        <p>Notificações por e‑mail ou WhatsApp sempre que a geração cair fora do padrão.</p>
-                    </div>
-                    <div class="o-que-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4v16h16V4H4z"/><path d="M8 8h8M8 12h6M8 16h4"/></svg>
-                        <h3>Suporte remoto</h3>
-                        <p>Equipe técnica disponível para análise e orientação, conforme o plano contratado.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Por que contratar -->
-            <div class="porque-section">
-                <h2 style="text-align: center; color: var(--azul); margin-bottom: 1rem;">💡 Por que contratar um plano de monitoramento?</h2>
-                <div class="porque-grid">
-                    <div class="porque-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                        <h3>Evite perdas financeiras</h3>
-                        <p>Um sistema sujo ou com falhas pode perder até 30% da geração. Detectamos antes que vire prejuízo.</p>
-                    </div>
-                    <div class="porque-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                        <h3>Alertas automáticos</h3>
-                        <p>Receba notificações assim que a geração cair. Não espere o problema ficar grave.</p>
-                    </div>
-                    <div class="porque-card">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4v16h16V4H4z"/><path d="M8 8h8M8 12h6M8 16h4"/></svg>
-                        <h3>Laudos especializados</h3>
-                        <p>Relatórios com recomendações práticas para corrigir anomalias e maximizar a eficiência.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quiz -->
-            <div class="quiz-section">
-                <div class="quiz-header">
-                    <h2>
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
-                            <circle cx="10.5" cy="10.5" r="7.5"></circle>
-                            <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
-                        </svg>
-                        Encontre o laudo ideal para você
-                    </h2>
-                    <p>Responda 3 perguntas rápidas e descubra qual nível de monitoramento se adapta ao seu negócio.</p>
-                </div>
-                <div id="quizSteps">
-                    <div class="quiz-step active" data-step="1">
-                        <div class="quiz-question">
-                            <p>1. Qual o porte do seu sistema solar?</p>
-                            <div class="quiz-options">
-                                <span class="quiz-option" data-value="pequeno">Pequeno (até 10 kWp)</span>
-                                <span class="quiz-option" data-value="medio">Médio (10 a 50 kWp)</span>
-                                <span class="quiz-option" data-value="grande">Grande (acima de 50 kWp)</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="quiz-step" data-step="2">
-                        <div class="quiz-question">
-                            <p>2. Com que frequência você quer receber relatórios?</p>
-                            <div class="quiz-options">
-                                <span class="quiz-option" data-value="mensal">Mensal</span>
-                                <span class="quiz-option" data-value="quinzenal">Quinzenal</span>
-                                <span class="quiz-option" data-value="semanal">Semanal</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="quiz-step" data-step="3">
-                        <div class="quiz-question">
-                            <p>3. Qual tipo de suporte você prefere?</p>
-                            <div class="quiz-options">
-                                <span class="quiz-option" data-value="basico">Apenas relatório (sem alertas)</span>
-                                <span class="quiz-option" data-value="essencial">Alertas por e-mail + suporte remoto (48h)</span>
-                                <span class="quiz-option" data-value="premium">Alertas WhatsApp + suporte 24h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="quiz-navigation">
-                    <button class="quiz-nav-btn" id="prevBtn" disabled>← Voltar</button>
-                    <button class="quiz-nav-btn" id="nextBtn">Próxima →</button>
-                </div>
-                <div class="quiz-result" id="quizResult" style="display: none;">
-                    <strong>🔹 Plano recomendado: <span id="recomendadoPlano"></span></strong><br>
-                    <button class="btn-assinar-quiz" id="btnAssinarQuiz">Assinar agora</button>
-                </div>
-            </div>
-
-            <!-- Planos (ocultos) -->
-            <div class="planos-section" id="planosSection">
-                <h2 style="text-align: center; margin: 2rem 0 1rem;">Nossos planos de monitoramento</h2>
-                <div class="planos-grid">
-                    <div class="plano-card">
-                        <div class="plano-header">
-                            <div class="plano-nome">Básico</div>
-                            <div class="plano-preco">R$ 49,90<span>/mês</span></div>
-                            <div class="plano-descricao">A partir do 2º mês. Taxa de ativação: R$197</div>
-                        </div>
-                        <div class="plano-features">
-                            <ul>
-                                <li>✓ Relatório mensal</li>
-                                <li>✓ Indicador de saúde</li>
-                                <li>✓ Geração real vs esperada</li>
-                                <li>✓ Perda financeira acumulada</li>
-                                <li>✓ Projeção de perda futura</li>
-                                <li>✗ Alertas proativos</li>
-                                <li>✗ Suporte remoto</li>
-                                <li>✗ Histórico completo</li>
-                            </ul>
-                        </div>
-                        <div class="plano-footer">
-                            <button class="btn-assinar-plano btn-outline" data-plano="Básico">Assinar plano</button>
-                        </div>
-                    </div>
-                    <div class="plano-card recomendado">
-                        <div class="recomendado-tag">⭐ MAIS VENDIDO</div>
-                        <div class="plano-header">
-                            <div class="plano-nome">Essencial</div>
-                            <div class="plano-preco">R$ 79,90<span>/mês</span></div>
-                            <div class="plano-descricao">A partir do 2º mês. Taxa de ativação: R$197</div>
-                        </div>
-                        <div class="plano-features">
-                            <ul>
-                                <li>✓ Relatório quinzenal</li>
-                                <li>✓ Indicador de saúde</li>
-                                <li>✓ Geração real vs esperada</li>
-                                <li>✓ Perda financeira acumulada</li>
-                                <li>✓ Projeção de perda futura</li>
-                                <li>✓ Alertas proativos (e-mail)</li>
-                                <li>✓ Suporte remoto (WhatsApp – 48h)</li>
-                                <li>✗ Histórico completo</li>
-                            </ul>
-                        </div>
-                        <div class="plano-footer">
-                            <button class="btn-assinar-plano" data-plano="Essencial">Assinar plano</button>
-                        </div>
-                    </div>
-                    <div class="plano-card">
-                        <div class="plano-header">
-                            <div class="plano-nome">Premium</div>
-                            <div class="plano-preco">R$ 129,90<span>/mês</span></div>
-                            <div class="plano-descricao">A partir do 2º mês. Taxa de ativação: R$197</div>
-                        </div>
-                        <div class="plano-features">
-                            <ul>
-                                <li>✓ Relatório semanal</li>
-                                <li>✓ Indicador de saúde</li>
-                                <li>✓ Geração real vs esperada</li>
-                                <li>✓ Perda financeira acumulada</li>
-                                <li>✓ Projeção de perda futura</li>
-                                <li>✓ Alertas (e-mail + WhatsApp)</li>
-                                <li>✓ Suporte remoto (WhatsApp – 24h)</li>
-                                <li>✓ Histórico completo*</li>
-                            </ul>
-                        </div>
-                        <div class="plano-footer">
-                            <button class="btn-assinar-plano btn-outline" data-plano="Premium">Assinar plano</button>
-                        </div>
-                    </div>
-                </div>
-                <div style="text-align: center; font-size: 0.85rem; color: #5c7a6c; margin-top: 1rem;">
-                    *Histórico completo disponível para sistemas compatíveis.<br>
-                    Taxa de ativação de R$197 inclui primeiro laudo detalhado + primeiro mês de assinatura.
-                </div>
-            </div>
-        </div>
+<div class="container">
+  <header>
+    <h1>💗 Quizz do Nosso Amor 💗</h1>
+  </header>
+  <main>
+    <div id="quizz-container">
+      <p id="question">
+        <span id="question-number">1</span> &#8212;
+        <span id="question-text"></span>
+      </p>
+      <div id="answers-box">
+        <button><span class="btn-letter">A</span> <span class="question-answer"></span></button>
+        <button><span class="btn-letter">B</span> <span class="question-answer"></span></button>
+        <button><span class="btn-letter">C</span> <span class="question-answer"></span></button>
+        <button><span class="btn-letter">D</span> <span class="question-answer"></span></button>
+      </div>
     </div>
 
-    <!-- Rodapé (padrão) -->
-    <footer class="footer">
-        <div class="footer__container">
-            <div class="footer__col"><img src="assets/img/logo.png" alt="Logo" class="footer__logo"><p class="footer__description">Soluções inteligentes em energia limpa.</p></div>
-            <div class="footer__col"><h4 class="footer__title">Links Rápidos</h4><ul class="footer__links"><li><a href="index.html">Home</a></li><li><a href="instalacao.html">Instalação</a></li><li><a href="consultoria.html">Consultoria</a></li><li><a href="calculadora.html">Calculadora</a></li><li><a href="blog.html">Blog</a></li><li><a href="contato.html">Contato</a></li></ul></div>
-            <div class="footer__col"><h4 class="footer__title">Contato</h4><div class="footer__contact"><p><strong>Telefone:</strong> (11) 5028-2426</p><p><strong>WhatsApp:</strong> (11) 91686-6075</p><p><strong>E-mail:</strong> contato@solivia.com.br</p></div><div class="footer__social"><a href="#" aria-label="Instagram"><svg width="20" height="20" fill="white" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8z"/></svg></a><a href="#" aria-label="Facebook"><svg width="20" height="20" fill="white" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a><a href="#" aria-label="LinkedIn"><svg width="20" height="20" fill="white" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg></a></div></div>
-        </div>
-        <div class="footer__bottom"><div class="footer__bottom-container"><p class="footer__copy">&copy; 2026 SoLivia Engenharia. Todos os direitos reservados.</p><p class="footer__cnpj">CNPJ: 49.972.976/0001-15</p><a href="#" class="footer__privacy">Política de Privacidade</a></div></div>
-    </footer>
-
-    <!-- Modais -->
-    <div id="modalHubspot" class="modal-overlay">
-        <div class="modal-content modal-hubspot">
-            <button class="modal-close" id="closeHubspotModal">✕</button>
-            <h3 style="color: #0b2f5c; text-align: center; margin-bottom: 1rem;">Assine o plano de monitoramento</h3>
-            <div id="hubspotFormContainer" class="hubspot-form-container"></div>
-        </div>
+    <div id="score-container" class="hide">
+      <h2>💖 Parabéns, amor! 💖</h2>
+      <p id="display-score"><span>0</span>%</p>
+      <p>Você acertou <span id="correct-answers">0</span> de <span id="questions-qty">8</span> perguntas</p>
+      <button id="restart">⟳ Refazer o quiz</button>
     </div>
+  </main>
+  <footer>
+    <p>✨ Feito com carinho para você ✨</p>
+  </footer>
+</div>
 
-    <div class="modal-overlay" id="modalCalculadora">
-        <div class="modal-content"><button class="modal-close" id="modalClose">✕</button>
-            <div id="etapa-simulacao"><div class="calc-card calc-card--featured" style="box-shadow: none; border: none; padding: 0;">
-                <h3 class="calc-card__title"><img src="assets/img/logo-simbolo.png" alt="Logo" style="height: 28px;">Calculadora Solar</h3>
-                <p class="calc-card__subtitle">Descubra <strong>agora</strong> quanto você pode economizar</p>
-                <div class="calc-card__tabs"><div class="calc-card__tab active">simulação</div><div class="calc-card__tab">resumo</div></div>
-                <form id="form-calc-modal" onsubmit="event.preventDefault(); calcularModal();">
-                    <div class="calc-card__field"><label for="cep_modal">CEP</label><input type="text" id="cep_modal" placeholder="Digite seu CEP" required></div>
-                    <div class="calc-card__field"><label for="valor_conta_modal">Valor da conta de luz</label><input type="text" id="valor_conta_modal" placeholder="R$ 0,00" required></div>
-                    <div id="email-opt-modal" style="display: none;"><div class="calc-card__field"><label for="email_opt_modal">E-mail (opcional)</label><input type="email" id="email_opt_modal" placeholder="Receba o resultado por e-mail"></div></div>
-                    <button type="button" id="btn-email-modal" class="calc-card__link" onclick="mostrarEmailModal()">✉️ Quero receber o resultado por e-mail</button>
-                    <button type="submit" class="calc-card__btn">SIMULAR AGORA</button>
-                </form>
-                <p id="erro-modal" style="color: red; text-align: center; margin-top: 0.5rem; display: none;"></p>
-            </div></div>
-            <div id="etapa-resultado" style="display: none;"><div class="calc-card calc-card--featured">...</div></div>
-        </div>
-    </div>
+<script>
+  (function(){
+    // ========== PERGUNTAS PERSONALIZADAS (ATUALIZADAS) ==========
+    const QUESTIONS = [
+      {
+        text: "Onde foi o nosso primeiro beijo?",
+        answers: ["No show do Natiruts", "Na praia", "No cinema", "Na casa de um amigo"],
+        correct: "No show do Natiruts"
+      },
+      {
+        text: "Quantas vezes nós já fomos ao cinema juntos?",
+        answers: ["Zero", "Uma vez", "Duas vezes", "Mais de cinco"],
+        correct: "Zero"
+      },
+      {
+        text: "Qual o meu apelido carinhoso para você?",
+        answers: ["Lene", "Amor", "Vida", "Querida"],
+        correct: "Lene"
+      },
+      {
+        text: "Qual presente inesquecível eu já te dei?",
+        answers: ["Silicone", "Uma aliança", "Um celular", "Uma viagem"],
+        correct: "Silicone"
+      },
+      {
+        text: "Qual dia da semana a gente mais se encontra?",
+        answers: ["Sábado", "Domingo", "Sexta-feira", "Quarta-feira"],
+        correct: "Sábado"
+      },
+      {
+        text: "O que eu nunca esqueço de fazer por você?",
+        answers: ["dar bom dia", "dar boa noite", "fazer café", "mandar beijo"],
+        correct: "dar bom dia"
+      },
+      {
+        text: "Onde nos conhecemos pela primeira vez?",
+        answers: ["Praça da estação de Osasco", "No shopping", "Na escola", "Na igreja"],
+        correct: "Praça da estação de Osasco"
+      },
+      {
+        text: "Qual é a minha comida favorita que você prepara?",
+        answers: ["strogonoff de frango", "Lasanha", "Macarrão com brócolis", "Frango assado"],
+        correct: "strogonoff de frango"
+      }
+    ];
 
-    <div id="whatsappFloatButton" class="whatsapp-float" style="cursor: pointer;">
-        <svg width="28" height="28" fill="white" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-    </div>
+    const totalQuestions = QUESTIONS.length;
+    let currentIndex = 0;
+    let score = 0;
+    let locked = false;
+    let timeoutId = null;
 
-    <!-- Scripts -->
-    <script>
-        // Menu mobile
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileClose = document.getElementById('mobileClose');
-        const mobileOverlay = document.getElementById('mobileOverlay');
-        function openMenu() { mobileMenu.classList.add('active'); mobileOverlay.classList.add('active'); }
-        function closeMenu() { mobileMenu.classList.remove('active'); mobileOverlay.classList.remove('active'); }
-        if (hamburger) hamburger.addEventListener('click', openMenu);
-        if (mobileClose) mobileClose.addEventListener('click', closeMenu);
-        if (mobileOverlay) mobileOverlay.addEventListener('click', closeMenu);
+    // DOM elements
+    const quizzContainer = document.getElementById("quizz-container");
+    const scoreContainer = document.getElementById("score-container");
+    const questionNumberSpan = document.getElementById("question-number");
+    const questionTextSpan = document.getElementById("question-text");
+    const answersBox = document.getElementById("answers-box");
+    const correctAnswersSpan = document.getElementById("correct-answers");
+    const questionsQtySpan = document.getElementById("questions-qty");
+    const displayScoreSpan = document.querySelector("#display-score span");
+    const restartBtn = document.getElementById("restart");
 
-        // Modal HubSpot
-        const modalHubspot = document.getElementById('modalHubspot');
-        const closeHubspot = document.getElementById('closeHubspotModal');
-        let hubspotFormLoaded = false;
-        function abrirModalHubspot() {
-            modalHubspot.classList.add('active');
-            if (!hubspotFormLoaded && window.hbspt) {
-                window.hbspt.forms.create({
-                    region: "na1",
-                    portalId: "50719228",
-                    formId: "9203c887-d80a-450f-9485-0b7a4f5097c1",
-                    target: "#hubspotFormContainer"
-                });
-                hubspotFormLoaded = true;
-            }
+    questionsQtySpan.textContent = totalQuestions;
+
+    function clearTimer() {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+      }
+    }
+
+    function disableButtons(disabled = true) {
+      const btns = document.querySelectorAll("#answers-box button");
+      btns.forEach(btn => btn.disabled = disabled);
+    }
+
+    function resetButtonsStyle() {
+      const btns = document.querySelectorAll("#answers-box button");
+      btns.forEach(btn => {
+        btn.style.backgroundColor = "";
+        btn.disabled = false;
+      });
+    }
+
+    function loadQuestion() {
+      clearTimer();
+      locked = false;
+      const q = QUESTIONS[currentIndex];
+      questionNumberSpan.textContent = currentIndex + 1;
+      questionTextSpan.textContent = q.text;
+
+      const btns = document.querySelectorAll("#answers-box button");
+      q.answers.forEach((ans, idx) => {
+        if (btns[idx]) {
+          const letterSpan = btns[idx].querySelector(".btn-letter");
+          const answerSpan = btns[idx].querySelector(".question-answer");
+          if (letterSpan) letterSpan.textContent = String.fromCharCode(65 + idx);
+          if (answerSpan) answerSpan.textContent = ans;
+          btns[idx].style.backgroundColor = "";
+          btns[idx].disabled = false;
         }
-        function fecharModalHubspot() { modalHubspot.classList.remove('active'); }
-        if (closeHubspot) closeHubspot.addEventListener('click', fecharModalHubspot);
-        modalHubspot.addEventListener('click', (e) => { if (e.target === modalHubspot) fecharModalHubspot(); });
+      });
+    }
 
-        document.querySelectorAll('.btn-assinar-plano, #btnAssinarQuiz').forEach(btn => {
-            btn.addEventListener('click', (e) => { e.preventDefault(); abrirModalHubspot(); });
-        });
+    function finishQuiz() {
+      clearTimer();
+      const percent = Math.round((score / totalQuestions) * 100);
+      displayScoreSpan.textContent = percent;
+      correctAnswersSpan.textContent = score;
+      quizzContainer.classList.add("hide");
+      scoreContainer.classList.remove("hide");
+    }
 
-        // Quiz
-        let currentStep = 1;
-        const steps = document.querySelectorAll('.quiz-step');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const quizResultDiv = document.getElementById('quizResult');
-        const recomendadoSpan = document.getElementById('recomendadoPlano');
-        const planosSection = document.getElementById('planosSection');
-        let respostas = { q1: null, q2: null, q3: null };
+    function nextQuestion() {
+      if (currentIndex + 1 >= totalQuestions) {
+        finishQuiz();
+      } else {
+        currentIndex++;
+        loadQuestion();
+      }
+    }
 
-        function showStep(step) {
-            steps.forEach((el, idx) => { el.classList.toggle('active', idx + 1 === step); });
-            prevBtn.disabled = (step === 1);
-            nextBtn.textContent = (step === 3) ? 'Ver resultado' : 'Próxima →';
-        }
+    function handleAnswer(clickedBtn, selectedAnswer) {
+      if (locked) return;
+      const currentQ = QUESTIONS[currentIndex];
+      const isCorrect = (selectedAnswer === currentQ.correct);
+      if (isCorrect) score++;
 
-        function getSelectedValue(step) {
-            const stepDiv = document.querySelector(`.quiz-step[data-step="${step}"]`);
-            const selected = stepDiv?.querySelector('.quiz-option.selected');
-            return selected ? selected.getAttribute('data-value') : null;
-        }
+      locked = true;
+      disableButtons(true);
 
-        function updateNavigation() { nextBtn.disabled = getSelectedValue(currentStep) === null; }
+      clickedBtn.style.backgroundColor = isCorrect ? "#c8e6d9" : "#ffe0db";
+      clearTimer();
+      timeoutId = setTimeout(() => {
+        clickedBtn.style.backgroundColor = "";
+        resetButtonsStyle();
+        locked = false;
+        clearTimer();
+        nextQuestion();
+      }, 600);
+    }
 
-        function calcularRecomendacao() {
-            const { q1, q2, q3 } = respostas;
-            if (!q1 || !q2 || !q3) return null;
-            if (q1 === "grande" || q2 === "semanal" || q3 === "premium") return "Premium";
-            if (q1 === "medio" || q2 === "quinzenal" || q3 === "essencial") return "Essencial";
-            return "Básico";
-        }
+    function attachEvents() {
+      const btns = document.querySelectorAll("#answers-box button");
+      btns.forEach(btn => {
+        btn.removeEventListener("click", btn._listener);
+        const handler = (e) => {
+          const answerSpan = btn.querySelector(".question-answer");
+          if (!answerSpan) return;
+          const answerText = answerSpan.textContent;
+          handleAnswer(btn, answerText);
+        };
+        btn.addEventListener("click", handler);
+        btn._listener = handler;
+      });
+    }
 
-        function showResult() {
-            const recomendacao = calcularRecomendacao();
-            if (recomendacao) {
-                recomendadoSpan.innerText = recomendacao;
-                quizResultDiv.style.display = 'block';
-                planosSection.classList.add('visible');
-                setTimeout(() => planosSection.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
-            }
-        }
+    function restartQuiz() {
+      clearTimer();
+      currentIndex = 0;
+      score = 0;
+      locked = false;
+      resetButtonsStyle();
+      scoreContainer.classList.add("hide");
+      quizzContainer.classList.remove("hide");
+      loadQuestion();
+      attachEvents();
+    }
 
-        document.querySelectorAll('.quiz-option').forEach(opt => {
-            opt.addEventListener('click', () => {
-                const stepDiv = opt.closest('.quiz-step');
-                const step = parseInt(stepDiv.getAttribute('data-step'), 10);
-                stepDiv.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
-                opt.classList.add('selected');
-                const value = opt.getAttribute('data-value');
-                if (step === 1) respostas.q1 = value;
-                else if (step === 2) respostas.q2 = value;
-                else if (step === 3) respostas.q3 = value;
-                updateNavigation();
-            });
-        });
+    function init() {
+      loadQuestion();
+      attachEvents();
+      restartBtn.addEventListener("click", restartQuiz);
+    }
 
-        nextBtn.addEventListener('click', () => {
-            if (getSelectedValue(currentStep) === null) return;
-            if (currentStep < 3) { currentStep++; showStep(currentStep); updateNavigation(); }
-            else if (currentStep === 3) showResult();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            if (currentStep > 1) { currentStep--; showStep(currentStep); updateNavigation(); quizResultDiv.style.display = 'none'; }
-        });
-
-        showStep(1); updateNavigation();
-
-        // Calculadora (scripts simplificados, apenas para compatibilidade)
-        const modalOverlayCalc = document.getElementById('modalCalculadora');
-        const modalCloseBtn = document.getElementById('modalClose');
-        const openModalBtns = document.querySelectorAll('.header__cta');
-        const etapaSimulacao = document.getElementById('etapa-simulacao');
-        const etapaResultado = document.getElementById('etapa-resultado');
-
-        openModalBtns.forEach(btn => {
-            if (btn) btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                modalOverlayCalc.classList.add('active');
-                etapaSimulacao.style.display = 'block';
-                etapaResultado.style.display = 'none';
-                document.getElementById('erro-modal').style.display = 'none';
-                document.getElementById('sucesso-modal').style.display = 'none';
-                document.getElementById('form-captura-modal').style.display = 'block';
-            });
-        });
-        if (modalCloseBtn) modalCloseBtn.addEventListener('click', () => modalOverlayCalc.classList.remove('active'));
-        modalOverlayCalc.addEventListener('click', (e) => { if (e.target === modalOverlayCalc) modalOverlayCalc.classList.remove('active'); });
-
-        function mostrarEmailModal() { document.getElementById('email-opt-modal').style.display = 'block'; document.getElementById('btn-email-modal').style.display = 'none'; }
-        function mostrarUploadModal() { document.getElementById('upload-opt-modal').style.display = 'block'; document.getElementById('btn-upload-modal').style.display = 'none'; }
-
-        function aplicarMascaraCep(input) {
-            input.addEventListener('input', function(e) {
-                let cep = e.target.value.replace(/\D/g, '');
-                if (cep.length > 5) cep = cep.slice(0,5) + '-' + cep.slice(5,8);
-                e.target.value = cep;
-            });
-        }
-        function aplicarMascaraValor(input) {
-            input.addEventListener('input', function(e) {
-                let valor = e.target.value.replace(/\D/g, '');
-                valor = (parseInt(valor) / 100).toLocaleString('pt-BR', { minimumFractionDigits: 2 });
-                e.target.value = 'R$ ' + valor;
-            });
-        }
-        const cepModal = document.getElementById('cep_modal');
-        const valorModal = document.getElementById('valor_conta_modal');
-        if (cepModal) aplicarMascaraCep(cepModal);
-        if (valorModal) aplicarMascaraValor(valorModal);
-
-        const irradiacaoPorEstado = { 'SP':4.5,'MG':5.0,'RJ':4.8,'ES':4.7,'PR':4.4,'SC':4.3,'RS':4.2,'MS':5.1,'MT':5.2,'GO':5.0,'DF':5.1,'BA':5.3,'SE':5.2,'AL':5.2,'PE':5.1,'PB':5.0,'RN':5.0,'CE':5.1,'PI':5.2,'MA':5.0,'PA':4.8,'AP':4.7,'TO':5.0,'RO':4.6,'AC':4.5,'AM':4.4,'RR':5.0 };
-        const tarifaPorEstado = { 'SP':0.92,'MG':0.89,'RJ':0.95,'ES':0.88,'PR':0.85,'SC':0.84,'RS':0.87,'MS':0.90,'MT':0.91,'GO':0.88,'DF':0.86,'BA':0.93,'SE':0.91,'AL':0.92,'PE':0.90,'PB':0.89,'RN':0.91,'CE':0.88,'PI':0.87,'MA':0.86,'PA':0.94,'AP':0.95,'TO':0.89,'RO':0.92,'AC':0.93,'AM':0.96,'RR':0.97 };
-        
-        async function buscarEnderecoECalcular(cep, valorConta, erroDiv) {
-            try {
-                const dadosCep = await (await fetch(`https://viacep.com.br/ws/${cep}/json/`)).json();
-                if (dadosCep.erro) throw new Error();
-                const estado = dadosCep.uf;
-                const irrad = irradiacaoPorEstado[estado] || 4.5;
-                const tarifa = tarifaPorEstado[estado] || 0.85;
-                const consumo = valorConta / tarifa;
-                const potencia = consumo / (irrad * 30 * 0.75);
-                const geracao = potencia * irrad * 30 * 0.75;
-                const economia = geracao * tarifa;
-                const payback = (potencia * 4000) / (economia * 12);
-                return {
-                    endereco: `${dadosCep.logradouro || ''}, ${dadosCep.bairro || ''} - ${dadosCep.localidade || ''}/${estado}`,
-                    potencia: potencia.toFixed(2),
-                    economia: economia.toFixed(2),
-                    payback: payback.toFixed(1),
-                    valorConta
-                };
-            } catch(e) {
-                erroDiv.textContent = 'Erro ao buscar dados. Tente novamente.';
-                erroDiv.style.display = 'block';
-                return null;
-            }
-        }
-
-        let dadosModal = {};
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwdwSgHMbuHcGSD5xI0PzdUIOnwz9gRW-i6ey7Vwm1ZlMd1zQyBA52w33W33dQbVLr4pQ/exec';
-
-        async function calcularModal() {
-            const userChoice = localStorage.getItem('cookieChoice');
-            if (userChoice !== 'accepted') {
-                document.getElementById('cookieConsent').style.display = 'flex';
-                alert('⚠️ Para usar a calculadora, você precisa aceitar nossos cookies de rastreamento. Clique em "Aceitar" no banner abaixo.');
-                return;
-            }
-            const cep = document.getElementById('cep_modal').value.replace(/\D/g, '');
-            const valorStr = document.getElementById('valor_conta_modal').value;
-            const erroDiv = document.getElementById('erro-modal');
-            if (cep.length !== 8) { erroDiv.textContent = 'CEP inválido.'; erroDiv.style.display = 'block'; return; }
-            const valorMatch = valorStr.match(/[\d,.]+/);
-            if (!valorMatch) { erroDiv.textContent = 'Valor inválido.'; erroDiv.style.display = 'block'; return; }
-            const valorConta = parseFloat(valorMatch[0].replace(/\./g, '').replace(',', '.'));
-            if (isNaN(valorConta) || valorConta <= 0) { erroDiv.textContent = 'Valor inválido.'; erroDiv.style.display = 'block'; return; }
-            erroDiv.style.display = 'none';
-            const dados = await buscarEnderecoECalcular(cep, valorConta, erroDiv);
-            if (!dados) return;
-            dadosModal = dados;
-            document.getElementById('endereco-modal').textContent = dados.endereco;
-            document.getElementById('economia-resultado').textContent = `R$ ${dados.economia.replace('.', ',')}`;
-            document.getElementById('detalhes-resultado').textContent = `Potência: ${dados.potencia} kWp | Retorno: ~${dados.payback} anos`;
-            etapaSimulacao.style.display = 'none';
-            etapaResultado.style.display = 'block';
-            const emailOpcional = document.getElementById('email_opt_modal') ? document.getElementById('email_opt_modal').value.trim() : '';
-            if (emailOpcional) enviarEmailSimples(emailOpcional, dados);
-        }
-
-        async function enviarEmailSimples(emailDestino, dadosSimulacao) {
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({ 'event': 'email_simulacao_enviado', 'email': emailDestino });
-            const payload = { apenas_email: true, nome: 'Visitante', email_opcional: emailDestino, valor_conta: dadosSimulacao.valorConta.toString(), economia: dadosSimulacao.economia, potencia: dadosSimulacao.potencia, endereco: dadosSimulacao.endereco };
-            try {
-                await fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-                alert(`📧 E-mail enviado para ${emailDestino}! Verifique sua caixa de entrada (ou spam).`);
-            } catch(err) { console.error(err); alert('Não foi possível enviar o e-mail.'); }
-        }
-
-        function converterArquivoParaBase64(arquivo) {
-            return new Promise((resolve, reject) => {
-                const leitor = new FileReader();
-                leitor.onload = () => resolve(leitor.result.split(',')[1]);
-                leitor.onerror = reject;
-                leitor.readAsDataURL(arquivo);
-            });
-        }
-
-        async function enviarLead() {
-            const submitBtn = document.querySelector('#form-captura-modal button[type="submit"]');
-            if (submitBtn.disabled) return;
-            const nome = document.getElementById('nome_modal').value.trim();
-            const email = document.getElementById('email_modal').value.trim();
-            const telefone = document.getElementById('telefone_modal').value.replace(/\D/g, '');
-            const emailOpcional = document.getElementById('email_opt_modal') ? document.getElementById('email_opt_modal').value.trim() : '';
-            if (!nome || !email || !telefone) { alert('Preencha nome, e-mail e WhatsApp.'); return; }
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('E-mail inválido.'); return; }
-            if (telefone.length < 10 || telefone.length > 11) { alert('WhatsApp inválido.'); return; }
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span class="spinner"></span> Enviando...';
-            const cepDigitado = document.getElementById('cep_modal').value.replace(/\D/g, '');
-            let arquivoBase64 = null, nomeArquivo = null;
-            const inputFile = document.getElementById('fatura_modal');
-            if (inputFile && inputFile.files.length) {
-                const arquivo = inputFile.files[0];
-                nomeArquivo = arquivo.name;
-                arquivoBase64 = await converterArquivoParaBase64(arquivo);
-            }
-            const payload = { nome, email, telefone, cep: cepDigitado, endereco: dadosModal.endereco || '', valor_conta: (dadosModal.valorConta || '').toString(), economia: dadosModal.economia || '', potencia: dadosModal.potencia || '', arquivoBase64, nomeArquivo, email_opcional: emailOpcional, email_ja_enviado: (emailOpcional && emailOpcional !== '') ? true : false };
-            try {
-                await fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({ 'event': 'form_lead_enviado', 'form_name': 'calculadora_modal', 'nome': nome, 'email': email });
-                document.getElementById('sucesso-modal').style.display = 'block';
-                document.getElementById('form-captura-modal').style.display = 'none';
-                const btnReset = document.createElement('button');
-                btnReset.className = 'calc-card__btn';
-                btnReset.innerText = '🔄 Nova Simulação';
-                btnReset.onclick = () => {
-                    document.getElementById('cep_modal').value = '';
-                    document.getElementById('valor_conta_modal').value = '';
-                    document.getElementById('email_opt_modal').value = '';
-                    document.getElementById('email-opt-modal').style.display = 'none';
-                    document.getElementById('btn-email-modal').style.display = 'inline-block';
-                    document.getElementById('etapa-simulacao').style.display = 'block';
-                    document.getElementById('etapa-resultado').style.display = 'none';
-                    document.getElementById('sucesso-modal').style.display = 'none';
-                    document.getElementById('form-captura-modal').style.display = 'block';
-                    dadosModal = {};
-                    document.getElementById('upload-opt-modal').style.display = 'none';
-                    document.getElementById('btn-upload-modal').style.display = 'inline-block';
-                    btnReset.remove();
-                };
-                document.getElementById('etapa-resultado').querySelector('.calc-card').appendChild(btnReset);
-            } catch(err) { alert('Erro de rede: ' + err.message); }
-            finally { submitBtn.disabled = false; submitBtn.innerHTML = 'QUERO ECONOMIZAR'; }
-        }
-
-        // WhatsApp flutuante (abre direto, sem modal)
-        const whatsappFloatButton = document.getElementById('whatsappFloatButton');
-        if (whatsappFloatButton) {
-            whatsappFloatButton.addEventListener('click', () => {
-                window.open('https://wa.me/5511916866075', '_blank');
-            });
-        }
-    </script>
-
-    <!-- Cookie consent -->
-    <div id="cookieConsent" style="position: fixed; bottom: 0; left: 0; right: 0; background: #0b2f5c; color: white; padding: 1rem; text-align: center; font-size: 0.85rem; z-index: 9999; display: none; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem;">
-        <span>🍪 Usamos cookies para melhorar sua experiência. Ao clicar em "Aceitar", você concorda com nossa <a href="#" style="color: #ffc400;">Política de Privacidade</a>.</span>
-        <div><button id="acceptCookies" style="background:#ffc400; border:none; color:#0b2f5c; padding:0.4rem 1.2rem; border-radius:50px; font-weight:bold; cursor:pointer;">Aceitar</button>
-        <button id="declineCookies" style="background:transparent; border:1px solid #ffc400; color:#ffc400; padding:0.4rem 1.2rem; border-radius:50px; cursor:pointer;">Apenas essenciais</button></div>
-    </div>
-    <script>
-        const userChoice = localStorage.getItem('cookieChoice');
-        function sendConsentToGTM(status) { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ 'event': 'consent_updated', 'analytics_storage': status, 'ad_storage': status }); }
-        if (userChoice === 'accepted') { sendConsentToGTM('granted'); document.getElementById('cookieConsent').style.display = 'none'; }
-        else if (!userChoice) document.getElementById('cookieConsent').style.display = 'flex';
-        else document.getElementById('cookieConsent').style.display = 'none';
-        document.getElementById('acceptCookies').addEventListener('click', () => { localStorage.setItem('cookieChoice', 'accepted'); document.getElementById('cookieConsent').style.display = 'none'; sendConsentToGTM('granted'); });
-        document.getElementById('declineCookies').addEventListener('click', () => { localStorage.setItem('cookieChoice', 'declined'); document.getElementById('cookieConsent').style.display = 'none'; sendConsentToGTM('denied'); });
-    </script>
+    init();
+  })();
+</script>
 </body>
 </html>
